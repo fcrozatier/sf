@@ -16,7 +16,7 @@ module Sfantasy
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    # config.assets.initialize_on_precompile = false                               # added
+    config.assets.initialize_on_precompile = false                               # added
 
   end
 end
