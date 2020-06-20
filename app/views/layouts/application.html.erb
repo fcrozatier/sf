@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
   <head>
     <title>Sfantasy</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application' %>
 
   </head>
 
-  <body>
+  <body class="h-full">
+    <% if admin_signed_in? %>
+      <nav>
+        <%#= link_to "Nouvelle Unité", new_chapter_path, class: "btn"  %>
+        <%= link_to edit_admin_registration_path do %>
+          <button class="btn"><%= current_admin.email %></button>
+        <% end %>
+        <%= link_to "Déconnexion", destroy_admin_session_path, method: :delete, class: "btn" %>
+      </nav>
+    <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
