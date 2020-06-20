@@ -13,7 +13,7 @@
 }
 
 .card {
-  @apply bg-gray-100 shadow-inner mx-auto p-4 mb-4;
+  @apply bg-gray-100 opacity-75 shadow-inner mx-auto p-4 mb-4;
 }
 
 /*! purgecss end ignore */
