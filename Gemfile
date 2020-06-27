@@ -33,6 +33,8 @@ gem 'tailwindcss', '~> 1.0.0'
 gem 'purgecss_rails', require: false
 gem 'devise'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
+gem "aws-sdk-s3", require: false
+gem 'image_processing'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
