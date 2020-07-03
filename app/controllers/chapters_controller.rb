@@ -5,7 +5,7 @@ class ChaptersController < ApplicationController
   # GET /chapters
   # GET /chapters.json
   def index
-    @chapters = Chapter.all
+    @chapters = Chapter.all.order("created_at ASC").paginate(page: params[:page])
   end
 
   # GET /chapters/1

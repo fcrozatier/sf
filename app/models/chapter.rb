@@ -6,6 +6,8 @@ class Chapter < ApplicationRecord
   
   has_rich_text :body
 
+  self.per_page = 10
+
   def optimized_image(image, x, y)
     image.variant(resize_to_fill: [x, y]).processed
   end
