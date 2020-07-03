@@ -1,19 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @chapter.title %>
-</p>
-
-<p>
-  <strong>Views:</strong>
-  <%= @chapter.views %>
-</p>
-
-<p>
-  <strong>Admin:</strong>
-  <%= @chapter.admin_id %>
-</p>
-
-<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
-<%= link_to 'Back', chapters_path %>
+<div class="card max-w-4xl">
+  <%= image_tag @chapter.image %>
+  <div class="text-gray-800 text-base text-justify p-4">
+    <%= @chapter.body %>
+    <%= link_to 'back', root_path %>
+  </div> 
+</div>

@@ -1,5 +1,6 @@
 class ChaptersController < ApplicationController
   before_action :set_chapter, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, except: [:index, :show]
 
   # GET /chapters
   # GET /chapters.json
@@ -10,6 +11,8 @@ class ChaptersController < ApplicationController
   # GET /chapters/1
   # GET /chapters/1.json
   def show
+    views = @chapter.views + 1
+    @chapter.update(views: views)
   end
 
   # GET /chapters/new
@@ -24,7 +27,7 @@ class ChaptersController < ApplicationController
   # POST /chapters
   # POST /chapters.json
   def create
-    @chapter = Chapter.new(chapter_params)
+    @chapter = current_admin.chapters.build(chapter_params)
 
     respond_to do |format|
       if @chapter.save
@@ -69,6 +72,6 @@ class ChaptersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def chapter_params
-      params.require(:chapter).permit(:title, :views, :admin_id)
+      params.require(:chapter).permit(:title, :body, :thumbnail, :image)
     end
 end

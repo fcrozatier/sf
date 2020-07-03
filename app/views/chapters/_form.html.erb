@@ -1,12 +1,13 @@
 
-<%= simple_form_for(@chapter) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
+<%= form_with model: @chapter do |f| %>
+  
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :views %>
-    <%= f.association :admin %>
+    <%= f.text_field :title %><br/>
+    <%= f.label :thumbnail %>
+    <%= f.file_field :thumbnail %><br/>
+    <%= f.label :image %>
+    <%= f.file_field :image %><br/>
+    <%= f.rich_text_area :body %>
   </div>
 
   <div class="form-actions">
