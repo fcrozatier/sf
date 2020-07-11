@@ -1,13 +1,12 @@
 <style>
   body {
-    background-image: url(<%= url_for(@chapter.image) %>);
+    background-image: url(<%= url_for(@chapter.image) if @chapter.image.attached? %>);
     background-position: center;
     background-size: 100%;
   }
 </style>
 
 <div class="card max-w-4xl">
-  <%#= image_tag @chapter.image %>
   <div class="text-gray-800 text-base text-justify p-4">
     <%= @chapter.body %>
     <div class="shared-links mt-4">

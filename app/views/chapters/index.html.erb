@@ -9,7 +9,7 @@
 <% @chapters.each do |chapter| %>
   <div class="card max-w-lg">
     <%= link_to chapter do %>
-      <%= image_tag chapter.optimized_image(chapter.thumbnail, 500, 100) %>
+      <%= image_tag chapter.optimized_image(chapter.thumbnail, 500, 100) if chapter.thumbnail.attached? %>
       <div class="chapter-title my-2">
         <%= "Unité #{ chapter.id }" %>
       </div>
