@@ -5,11 +5,11 @@
 /*! purgecss start ignore */
 
 .btn {
-  @apply px-3 py-2 bg-gray-600 text-gray-200 rounded;
+  @apply px-3 py-2 bg-gray-900 text-gray-600 rounded;
 }
 
 .btn:hover {
-  @apply bg-gray-900;
+  @apply bg-gray-300;
 }
 
 .card {

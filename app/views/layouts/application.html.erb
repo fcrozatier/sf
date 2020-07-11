@@ -13,12 +13,14 @@
 
   <body class="h-full">
     <% if admin_signed_in? %>
-      <nav>
-        <%#= link_to "Nouvelle Unité", new_chapter_path, class: "btn"  %>
-        <%= link_to edit_admin_registration_path do %>
-          <button class="btn"><%= current_admin.email %></button>
-        <% end %>
-        <%= link_to "Déconnexion", destroy_admin_session_path, method: :delete, class: "btn" %>
+      <nav class="p-2">
+      <% if controller.action_name == "index" %>
+        <%= link_to "Nouvelle Unité", new_chapter_path, class: "btn inline-block"  %>
+      <% elsif controller.action_name == "show" %>
+        <%= link_to "Editer l'Unité", edit_chapter_path, class: "btn inline-block"  %>
+      <% end %>
+        <%= link_to current_admin.email, edit_admin_registration_path, class: "btn inline-block" %>
+        <%= link_to "Déconnexion", destroy_admin_session_path, method: :delete, class: "btn inline-block" %>
       </nav>
     <% end %>
     <p class="notice"><%= notice %></p>
