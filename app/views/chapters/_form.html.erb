@@ -2,15 +2,16 @@
 <%= form_with model: @chapter do |f| %>
   
   <div class="form-inputs">
-    <%= f.text_field :title %><br/>
-    <%= f.label :thumbnail %>
-    <%= f.file_field :thumbnail %><br/>
-    <%= f.label :image %>
-    <%= f.file_field :image %><br/>
-    <%= f.rich_text_area :body %>
+    <%= f.label :titre, class: "label" %>
+    <%= f.text_field :title, class: "input mb-3" %><br/>
+    <%= f.label :thumbnail, class:"label" %>
+    <%= f.file_field :thumbnail, class:"mb-3" %><br/>
+    <%= f.label :image, class:"label" %>
+    <%= f.file_field :image, class:"mb-5" %><br/>
+    <%= f.rich_text_area :body, class: "h-auto" %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions my-4">
+    <%= f.button "Créer", class:"btn-inverse" %>
   </div>
 <% end %>

@@ -10,10 +10,10 @@
   <div class="card max-w-lg">
     <%= link_to chapter do %>
       <%= image_tag chapter.optimized_image(chapter.thumbnail, 500, 100) %>
-      <div class="font-bold text-2xl font-serif mb-2">
+      <div class="chapter-title my-2">
         <%= "Unité #{ chapter.id }" %>
       </div>
-      <div class="text-gray-700 text-base mb-2">
+      <div class="text-gray-700 text-base">
         <%= chapter.body.to_plain_text.truncate_words(10) %>
       </div>
     <% end %>

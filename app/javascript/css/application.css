@@ -12,12 +12,28 @@
   @apply bg-gray-300;
 }
 
+.btn-inverse {
+  @apply px-3 py-2 bg-gray-300 text-gray-600 rounded;
+}
+
+.btn-inverse:hover {
+  @apply bg-gray-900;
+}
+
 .card {
   @apply bg-gray-100 opacity-75 shadow-inner mx-auto p-6 mb-4;
 }
 
 .label {
   @apply block text-base font-bold mb-1;
+}
+
+.chapter-title {
+  @apply font-bold text-2xl font-serif;
+}
+
+.title {
+  @apply text-xl;
 }
 
 .input {
@@ -28,4 +44,7 @@
   @apply outline-none;
 }
 
+.shared-links:hover {
+  @apply underline;
+}
 /*! purgecss end ignore */
