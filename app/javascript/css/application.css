@@ -1,7 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
 @import "btn.css";
 @import "form.css";
 
@@ -10,8 +9,8 @@
 body {
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   font: 400 14px/16px "Open Sans", "Arial";
 }
 

@@ -1,6 +1,8 @@
 <style>
   body {
     background-image: url(<%= url_for(@chapter.image) if @chapter.image.attached? %>);
+    background-position: center top;
+    background-attachment: scroll;
   }
 </style>
 
