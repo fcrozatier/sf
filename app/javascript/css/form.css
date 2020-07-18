@@ -1,0 +1,15 @@
+.title {
+  @apply text-xl;
+}
+
+.input {
+  @apply border border-gray-700 rounded w-full py-2 px-3 text-gray-900;
+}
+
+.input:focus {
+  @apply outline-none;
+}
+
+.shared-links:hover {
+  @apply underline;
+}

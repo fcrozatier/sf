@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
 
   </head>
 
@@ -23,8 +24,8 @@
         <%= link_to "Déconnexion", destroy_admin_session_path, method: :delete, class: "btn inline-block" %>
       </nav>
     <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p class="ml-10 notice text-white"><%= notice %></p>
+    <p class="ml-10 alert text-white"><%= alert %></p>
 
     <%= yield %>
   </body>

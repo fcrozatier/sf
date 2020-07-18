@@ -1,0 +1,15 @@
+.btn {
+  @apply px-3 py-2 bg-gray-900 text-gray-600 rounded;
+}
+
+.btn:hover {
+  @apply bg-gray-300;
+}
+
+.btn-inverse {
+  @apply px-3 py-2 bg-gray-300 text-gray-600 rounded;
+}
+
+.btn-inverse:hover {
+  @apply bg-gray-900;
+}

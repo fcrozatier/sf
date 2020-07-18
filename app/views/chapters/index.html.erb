@@ -1,24 +1,24 @@
 <style>
   body {
-    background-image: url("https://active-storage-rails-app.s3.eu-west-3.amazonaws.com/eso1006a.jpg");
-    background-position: center;
-    background-size: 100%;
+    background-image: url("https://active-storage-rails-app.s3.eu-west-3.amazonaws.com/eso1006a.jpg"); 
   }
 </style>
 
+<div class="mt-6">
 <% @chapters.each do |chapter| %>
-  <div class="card max-w-lg">
+  <div class="card max-w-xl">
     <%= link_to chapter do %>
-      <%= image_tag chapter.optimized_image(chapter.thumbnail, 500, 100) if chapter.thumbnail.attached? %>
-      <div class="chapter-title my-2">
+      <%= image_tag chapter.optimized_image(chapter.thumbnail, 500, 100), style:"width:100%" if chapter.thumbnail.attached? %>
+      <div class="chapter-title mt-2">
         <%= "Unité #{ chapter.id }" %>
       </div>
       <div class="text-gray-700 text-base">
-        <%= chapter.body.to_plain_text.truncate_words(10) %>
+        <%= chapter.body.to_plain_text.truncate_words(9) %>
       </div>
     <% end %>
   </div>
 <% end %>
+</div>
 <div class="apple_pagination">
   <%= will_paginate @chapters %>
 </div>
